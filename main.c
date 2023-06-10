@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <string.h>
 
 int	main()
 {
 	
 	size_t	len = 0;	//입력 받을 때 사용
 	char	*argv = NULL;	//문자 입력 받을 떄 사용
-
+	
 	//안내 문구
 	printf("Insert in the order of top, bottom, left, right.\n");	
 	printf("(top and bottom values are left to right, left and right values are top to bottom)\n");
@@ -14,8 +13,8 @@ int	main()
 	printf("values given in question: ");
 	getline(&argv, &len, stdin);
 	printf("\n");
-
-	if (check_err(argv) == 0 || strlen(argv) != 32)
+	
+	if (strlen(argv) != 32)
 	{
 		printf("Error: Pleaase enter correct values\n");
 		return (0);
