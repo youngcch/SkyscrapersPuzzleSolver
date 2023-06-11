@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+extern int	check_all(char arr[4][5], char test[4][4]);
+
 void	print_ans(char arr[4][5])
 {
 	int			i;
@@ -11,13 +13,11 @@ void	print_ans(char arr[4][5])
 		j = 0;
 		while (j < 4)
 		{
-			//write(1, &arr[i][j], 1);
 			printf("%c", arr[i][j]);
 			if (j < 3)
 				printf(" ");
 			j++;
-		}
-		//write(1, "\n", 1);
+        }
 		printf("\n");
 		i++;
 	}
@@ -49,7 +49,7 @@ void	make_board(int i, int j, char arr[4][5], char test[4][4])
 		return ;
 	else
 	{
-		if (i == 4) //정답이 맞는지 확인하는 추가적인 기능 필요
+		if (i == 4 && check_all(arr, test) == 1) 
 		{
 			print_ans(arr);
 			return ;
