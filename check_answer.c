@@ -1,4 +1,6 @@
-int	check_up(char arr[4][5], char up[4])
+//위쪽 답 맞는 지 확인
+//맞으면 1반환, 틀리면 0반환(모든 함수에 적용)
+int	check_up(char arr[4][5], char up[4])	
 {
 	char	max;
 	int		i;
@@ -27,6 +29,7 @@ int	check_up(char arr[4][5], char up[4])
 	return (1);
 }
 
+//아래쪽 답 맞는 지 확인
 int	check_down(char arr[4][5], char down[4])
 {
 	char	max;
@@ -56,6 +59,7 @@ int	check_down(char arr[4][5], char down[4])
 	return (1);
 }
 
+//왼쪽 답 맞는 지 확인
 int	check_left(char arr[4][5], char left[4])
 {
 	char	max;
@@ -85,6 +89,7 @@ int	check_left(char arr[4][5], char left[4])
 	return (1);
 }
 
+//오른쪽 답 맞는 지 확인
 int	check_right(char arr[4][5], char right[4])
 {
 	char	max;
@@ -113,7 +118,8 @@ int	check_right(char arr[4][5], char right[4])
 	}
 	return (1);
 }
-
+//모든방향에서 정답조건에 맞는 지 확인
+//모두 맞으면 1반환
 int	check_all(char arr[4][5], char test[4][4])
 {
 	if (check_up(arr, test[0]) == 0)
