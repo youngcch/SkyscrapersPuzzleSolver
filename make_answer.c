@@ -2,7 +2,17 @@
 int	check_num(int i, int j, char x, char arr[4][5])
 {
 	
-    //답일 수 있는 조건을 만족할 때 1 반환하는 함수
+   int	idx;
+
+	idx = 0;
+	while (idx < 4)
+	{
+		if (x == arr[i][idx])
+			return (0);
+		if (x == arr[idx][j])
+			return (0);
+		idx++;
+	}
 	return (1);
 }
 
