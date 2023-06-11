@@ -14,7 +14,13 @@ int	check_err(char *str)
 			cnt++;
 			i++;
 		}
-		
+		else
+		{
+			if (str[i] == ' ' )
+				i++;
+			else
+				return (0);
+		}
 		if (cnt > 16)
 			return (0);
 	}
