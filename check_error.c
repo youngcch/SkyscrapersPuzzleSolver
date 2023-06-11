@@ -1,3 +1,4 @@
+
 int	check_err(char *str)
 {
 	int	i;
@@ -16,7 +17,7 @@ int	check_err(char *str)
 		}
 		else
 		{
-			if (str[i] == ' ' )
+			if (str[i] == ' ' || (str[i] > 8 && str[i] < 14))
 				i++;
 			else
 				return (0);
