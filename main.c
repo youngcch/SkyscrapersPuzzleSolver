@@ -68,6 +68,5 @@ int	main()
 	}
 	input_arr(argv, test);	//정답을 4x4형태로 배열에 저장
 	make_board(0, 0, arr, test);	//정답 생성 함수
-	if (arr[0][4] != '5')	//정답이 올바르지 않을 때 에러메세지 출력 후 종료
-		printf("Error: Pleaase enter correct values\n");
+	return (0);
 }
