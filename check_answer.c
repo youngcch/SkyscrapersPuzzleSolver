@@ -113,3 +113,16 @@ int	check_right(char arr[4][5], char right[4])
 	}
 	return (1);
 }
+
+int	check_all(char arr[4][5], char test[4][4])
+{
+	if (check_up(arr, test[0]) == 0)
+		return (0);
+	if (check_down(arr, test[1]) == 0)
+		return (0);
+	if (check_left(arr, test[2]) == 0)
+		return (0);
+	if (check_right(arr, test[3]) == 0)
+		return (0);
+	return (1);
+}
