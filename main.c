@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
+extern int	check_err(char *str);
+extern void	make_board(int i, int j, char arr[4][5], char test[4][4]);
+
+
+
 void	input_arr(char *argv, char test[4][4])
 {
 	int	i;
@@ -42,13 +48,13 @@ int	main()
 	printf("values given in question: ");
 	getline(&argv, &len, stdin);
 	printf("\n");
-	if (strlen(argv) != 32)
+	i = 0;
+	j = 0;
+	if (check_err(argv) == 0 || strlen(argv) != 32)
 	{
 		printf("Error: Pleaase enter correct values\n");
 		return (0);
 	}
-	i = 0;
-	j = 0;
 	while (i < 4)
 	{
 		j = 0;
@@ -59,5 +65,7 @@ int	main()
 		i++;
 	}
 	input_arr(argv, test);
+	make_board(0, 0, arr, test);
+	if (arr[0][4] != '5')
+		printf("Error: Pleaase enter correct values\n");
 }
-
