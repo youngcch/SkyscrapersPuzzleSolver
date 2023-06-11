@@ -84,3 +84,32 @@ int	check_left(char arr[4][5], char left[4])
 	}
 	return (1);
 }
+
+int	check_right(char arr[4][5], char right[4])
+{
+	char	max;
+	int		i;
+	int		cnt;
+	int		j;
+
+	i = 0;
+	while (i < 4)
+	{
+		max = arr[i][3];
+		cnt = 1;
+		j = 3;
+		while (j > 0)
+		{
+			if (max < arr[i][j - 1])
+			{
+				max = arr[i][j - 1];
+				cnt ++;
+			}
+			j--;
+		}
+		if (right[i] != '0' + cnt)
+			return (0);
+		i ++;
+	}
+	return (1);
+}
