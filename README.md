@@ -12,28 +12,40 @@ Skyscraper Puzzle is a puzzle that represents the height of a building located o
 2. Move to the project directory using the 'cd' command.
 3. After compiling, enter and use the value according to the instructions displayed when you run it.
 
-## Example of use
+#### Example of use
 
-gcc *.c
+    gcc *.c
 
- ./a.exe
+    ./a.exe
+ 
 Insert in the order of top, bottom, left, right.
+
 (top and bottom values are left to right, left and right values are top to bottom)
+
 ex: 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
+
 values given in question: 3 1 2 4 2 2 2 1 2 2 1 3 3 2 2 1
 
 2 4 3 1
+
 3 1 4 2
+
 4 2 1 3
+
 1 3 2 4
 
-## Contribute
+##### Contribute
 To contribute to this project, please follow these steps:
+
 1. Fork this repository.
 2. Create a new branch.
 3. Commit and push your changes.
 4. Create a Pull Request.
+   
+###### Installation
 
+    git clone https://github.com/youngcch/SkyscrapersPuzzleSolver.git
+***
 ## Liscense
 
 This project is released under the MIT License.
