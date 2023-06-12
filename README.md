@@ -1,4 +1,4 @@
-# "Skyscrapers Puzzle Solver"
+# Skyscrapers Puzzle Solver
 
 This project is a program that generates answers to skyscraper puzzles. When you enter a question in the Skyscraper Puzzle, an answer is generated and printed out.
 
